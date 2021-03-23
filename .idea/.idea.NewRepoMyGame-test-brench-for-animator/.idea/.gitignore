@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/.idea.NewRepoMyGame-test-brench-for-animator.iml
+/projectSettingsUpdater.xml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\Сергей\Desktop\Game\NewRepoMyGame-test-brench-for-animator\.idea\.idea.NewRepoMyGame-test-brench-for-animator\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
