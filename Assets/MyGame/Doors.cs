@@ -15,9 +15,10 @@ public class Doors : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        
+            if (other.gameObject.CompareTag("Player"))
             {
-              _anim.SetBool("IsOpen", _anim);
+                _anim.SetBool("IsOpen", _anim);
             }
     }
 
@@ -25,6 +26,7 @@ public class Doors : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
             {
+            
                 _anim.SetBool("IsOpen", !_anim);
             }   
     }
