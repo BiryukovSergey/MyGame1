@@ -7,12 +7,14 @@ public class TriggerOnMine : MonoBehaviour
     [SerializeField]
     private GameObject _mine;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.E))
-            {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
                 _mine.SetActive(true);
-            }
-        
+        }
+
     }
+   
 }
