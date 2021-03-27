@@ -12,8 +12,11 @@ public class Doors : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
     }
-
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerStay(Collider other)
+    //{
+        
+    //}
+    private void OnTriggerStay(Collider other)
     {
         
             if (other.gameObject.CompareTag("Player"))

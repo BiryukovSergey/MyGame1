@@ -18,6 +18,10 @@ public class PlayerRb : MonoBehaviour
     private Vector3 _derection;
     private Animator _animator;
 
+    private void Jump()
+    {
+        _animator.SetTrigger(_idleTriggerId1);
+    }
 
 
 
@@ -27,6 +31,7 @@ public class PlayerRb : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _idleTriggerId = Animator.StringToHash(_idleTrigger);
         _idleTriggerId1 = Animator.StringToHash(_idleTriggerJump);
+        
     }
 
 
@@ -40,8 +45,8 @@ public class PlayerRb : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //_rb.AddForce(transform.up * 300);
-            _animator.SetTrigger(_idleTriggerId1);
+           _animator.SetTrigger(_idleTriggerId1);
+           
         }
 
         if (Input.GetKeyDown(KeyCode.W))
