@@ -3261,6 +3261,14 @@ PrefabInstance:
       propertyPath: _idleTriggerJump
       value: Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 1272771634, guid: 25fdd438a42db5f4b9856e8618f4b6a1, type: 3}
+      propertyPath: idleTriggerBackSpeed
+      value: BackSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272771634, guid: 25fdd438a42db5f4b9856e8618f4b6a1, type: 3}
+      propertyPath: _idleTriggerBackSpeed
+      value: BackSpeed
+      objectReference: {fileID: 0}
     - target: {fileID: 657079165756362004, guid: 25fdd438a42db5f4b9856e8618f4b6a1,
         type: 3}
       propertyPath: m_Drag
@@ -7302,12 +7310,12 @@ PrefabInstance:
     - target: {fileID: 2792465263467804927, guid: cfbc68ee2b492db47a2ee9c4163c018d,
         type: 3}
       propertyPath: m_Size.z
-      value: 3.4742398
+      value: 4.6527047
       objectReference: {fileID: 0}
     - target: {fileID: 2792465263467804927, guid: cfbc68ee2b492db47a2ee9c4163c018d,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.7236586
+      value: -0.72365856
       objectReference: {fileID: 0}
     - target: {fileID: 2792465263467804927, guid: cfbc68ee2b492db47a2ee9c4163c018d,
         type: 3}
@@ -7317,7 +7325,7 @@ PrefabInstance:
     - target: {fileID: 2792465263467804927, guid: cfbc68ee2b492db47a2ee9c4163c018d,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.26426858
+      value: 0.2150219
       objectReference: {fileID: 0}
     - target: {fileID: 2792465263467804927, guid: cfbc68ee2b492db47a2ee9c4163c018d,
         type: 3}
