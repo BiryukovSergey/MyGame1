@@ -8,31 +8,37 @@ public class Key : MonoBehaviour
     [SerializeField] private Image _img;
     [SerializeField] private GameObject _keys;
     [SerializeField] private Transform _pos;
+    private AudioSource _keepKey;
 
     
     private void Awake()
     {
         _img.gameObject.SetActive(false);
-        
+        _keepKey = GetComponent<AudioSource>();
+        _keepKey.playOnAwake = false;
+        _keepKey.volume = 0.1f;
+
     }
 
-    private void Start()
+   private void OnTriggerStay(Collider other)
     {
-       // var keyDoor = Instantiate(_keys, _pos);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        _img.gameObject.SetActive(true);
-        if (Input.GetKeyDown((KeyCode.E)))
+        if (other.gameObject.CompareTag("Player"))
         {
-          Destroy(_keys);
+            _img.gameObject.SetActive(true);
+            if (Input.GetKey((KeyCode.E)))
+            {
+                _keepKey.Play();
+                Destroy(_keys);
+            } 
         }
-        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        _img.gameObject.SetActive(false);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _img.gameObject.SetActive(false);
+        }
+        
     }
 }

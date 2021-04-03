@@ -20,7 +20,8 @@ public class PlayerRb : MonoBehaviour
     private Rigidbody _rb;
     private Vector3 _derection;
     private Animator _animator;
-
+    private AudioSource _audioSource;
+    
     private void Jump()
     {
         _animator.SetTrigger(_idleTriggerIdJump);
@@ -35,6 +36,8 @@ public class PlayerRb : MonoBehaviour
         _idleTriggerId = Animator.StringToHash(_idleTrigger);
         _idleTriggerIdJump = Animator.StringToHash(_idleTriggerJump);
         _idleTriggerIdBackSpeed = Animator.StringToHash(idleTriggerBackSpeed);
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.volume = 0.02f;
     }
 
 
@@ -71,11 +74,6 @@ public class PlayerRb : MonoBehaviour
         {
             _animator.SetFloat(_idleTriggerIdBackSpeed,0);
         }
-
-
-
-
-
 
         /* if (Input.GetKeyDown(KeyCode.W))
          {

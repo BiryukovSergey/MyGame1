@@ -9,13 +9,13 @@ public class TextController : MonoBehaviour
 
     private void Awake()
     {
-        _img.gameObject.SetActive(true);
+        _img.gameObject.SetActive(false);
     }
 
     private void LateUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.D)
-            || Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)
+            || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space))
         {
             _img.gameObject.SetActive(false);
         }

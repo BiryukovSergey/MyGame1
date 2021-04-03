@@ -18,10 +18,10 @@ public class Warning : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
             _img.gameObject.SetActive(true);
     }
-    private void OnTriggerExit(Collider other)
+
+   private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
             _img.gameObject.SetActive(false);
     }
-
 }

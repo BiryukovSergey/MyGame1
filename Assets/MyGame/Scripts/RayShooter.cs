@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RayShooter : MonoBehaviour
 {
-    private Camera _camera;
+    /*private Camera _camera;
     void Start()
     {
         _camera = GetComponent<Camera>();
@@ -41,5 +41,5 @@ public class RayShooter : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         Destroy(sphere);
-    }
+    }*/
 }
