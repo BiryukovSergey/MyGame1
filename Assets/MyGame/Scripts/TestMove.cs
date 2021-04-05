@@ -1,0 +1,58 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TestMove : MonoBehaviour
+{
+    public float Speed = 5f;
+    public float Jump = 300f;
+
+    private bool _isGrounded;
+    private Rigidbody _rb;
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        //JumpLogic();
+        MovementLogic();
+    }
+    private void MovementLogic()
+    {
+        float movehorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(movehorizontal, 0.0f, moveVertical);
+        transform.Translate(movement * Speed * Time.fixedDeltaTime);
+    }
+    //private void JumpLogic()
+    //{
+    //    if (Input.GetAxis("jump") > 0)
+    //    {
+    //        if (_isGrounded)
+    //        {
+    //            _rb.AddForce(Vector3.up * Jump);
+    //        }
+    //    }
+    //}
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    IsGroundedUpate(collision, true);
+    //}
+
+    //void OnCollisionExit(Collision collision)
+    //{
+    //    IsGroundedUpate(collision, false);
+    //}
+
+    //private void IsGroundedUpate(Collision collision, bool value)
+    //{
+    //    if (collision.gameObject.tag == ("Ground"))
+    //    {
+    //        _isGrounded = value;
+    //    }
+
+    }
+
